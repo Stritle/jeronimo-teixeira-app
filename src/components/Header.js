@@ -11,8 +11,20 @@ import logo from "../images/jeronimoLogo.png";
 import { AntDesign } from "@expo/vector-icons";
 import { EvilIcons } from "@expo/vector-icons";
 import { MaterialIcons } from "@expo/vector-icons";
+import { Linking } from "react-native";
 
 const statusBarHeight = StatusBar.currentHeight;
+
+const makeCall = () => {
+  let phoneNumber = "";
+  if (Platform.OS === "android") {
+    phoneNumber = "tel:${+351279938030}";
+  } else {
+    phoneNumber = "telprompt:${tel:+351279938030}";
+  }
+
+  Linking.openURL(phoneNumber);
+};
 
 const Header = ({ navigation }) => {
   return (
@@ -27,10 +39,7 @@ const Header = ({ navigation }) => {
       </View>
       <View style={styles.content}>
         <View style={styles.items}>
-          <TouchableOpacity
-            style={styles.icone}
-            onPress={() => alert("259321564")}
-          >
+          <TouchableOpacity style={styles.icone} onPress={() => makeCall()}>
             <MaterialIcons name="contact-support" size={30} color="#fff" />
           </TouchableOpacity>
           <TouchableOpacity

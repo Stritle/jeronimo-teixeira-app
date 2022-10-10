@@ -59,13 +59,13 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   name: {
-    fontSize: 15,
+    fontSize: 13,
     fontWeight: "700",
     textAlign: "center",
     textTransform: "uppercase",
     color: "#fff",
   },
-  price: { fontSize: 16, textAlign: "center", marginBottom: 5, color: "#fff" },
+  price: { fontSize: 13, textAlign: "center", marginBottom: 5, color: "#fff" },
   buyButton: {
     paddingHorizontal: 11,
     paddingVertical: 5,

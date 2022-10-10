@@ -31,7 +31,7 @@ const Campanha = () => {
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: 20,
+    fontSize: 19,
     color: "#fff",
     paddingStart: 20,
     paddingTop: 20,

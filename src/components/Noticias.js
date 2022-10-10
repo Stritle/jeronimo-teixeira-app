@@ -29,8 +29,9 @@ const Noticias = () => {
   );
 };
 const styles = StyleSheet.create({
+  container: { marginBottom: 200 },
   title: {
-    fontSize: 20,
+    fontSize: 19,
     color: "#fff",
     paddingStart: 20,
     paddingTop: 20,
@@ -41,7 +42,6 @@ const styles = StyleSheet.create({
     marginStart: 20,
     marginEnd: 20,
     marginTop: 10,
-    marginBottom: 50,
     borderRadius: 5,
     borderTopRightRadius: 40,
     borderWidth: 1,

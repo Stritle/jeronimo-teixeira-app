@@ -3,11 +3,9 @@ import React from "react";
 import { Linking } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
-import { FontAwesome } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
 import ProdutosPage from "../pages/ProdutosPage";
 import EncomendasPage from "../pages/EncomendasPage";
-import ProductDetailsPage from "../pages/ProductDetailsPage";
 import StackNavigator from "./StackNavigator";
 import RatingsPage from "../pages/RatingsPage";
 import CondiçoesPage from "../pages/CondiçoesPage";
@@ -58,7 +56,7 @@ const AuthDrawerNavigation = () => {
       />
       <Drawer.Screen
         name="Dados pessoais"
-        component={ProductDetailsPage}
+        component={RatingsPage}
         options={{
           drawerIcon: (config) => (
             <Ionicons
@@ -66,15 +64,6 @@ const AuthDrawerNavigation = () => {
               size={20}
               color="#268039"
             ></Ionicons>
-          ),
-        }}
-      />
-      <Drawer.Screen
-        name="As minhas encomendas"
-        component={EncomendasPage}
-        options={{
-          drawerIcon: (config) => (
-            <Feather name="shopping-cart" size={20} color="#268039"></Feather>
           ),
         }}
       />
@@ -90,7 +79,7 @@ const AuthDrawerNavigation = () => {
 
       <Drawer.Screen
         name="Sobre a Jerónimo e Teixeira"
-        component={ProductDetailsPage}
+        component={RatingsPage}
         options={{
           drawerIcon: (config) => (
             <Entypo name="info" size={18} color="#268039"></Entypo>
