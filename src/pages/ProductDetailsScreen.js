@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#268039",
     marginStart: 15,
     marginEnd: 15,
-    marginTop: 15,
+    marginTop: 30,
     flexDirection: "column",
     borderRadius: 15,
   },

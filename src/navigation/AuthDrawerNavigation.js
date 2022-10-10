@@ -4,17 +4,16 @@ import { Ionicons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
-import Home from "../pages/Home";
 import ProdutosScreen from "../pages/ProdutosScreen";
-import Encomendas from "../pages/Encomendas";
+import EncomendasPage from "../pages/EncomendasPage";
 import ProductDetailsScreen from "../pages/ProductDetailsScreen";
 import StackNavigator from "./StackNavigator";
+import RatingsPage from "../pages/RatingsPages";
 
 const AuthDrawerNavigation = () => {
   const Drawer = createDrawerNavigator();
   return (
     <Drawer.Navigator
-      initialRouteName="Home"
       screenOptions={{
         headerShown: false,
         drawerStyle: {},
@@ -36,7 +35,7 @@ const AuthDrawerNavigation = () => {
       />
       <Drawer.Screen
         name="Encomendas"
-        component={Encomendas}
+        component={EncomendasPage}
         options={{
           drawerIcon: (config) => (
             <Feather name="shopping-cart" size={20} color="#268039"></Feather>
@@ -71,7 +70,7 @@ const AuthDrawerNavigation = () => {
       />
       <Drawer.Screen
         name="As minhas encomendas"
-        component={Encomendas}
+        component={EncomendasPage}
         options={{
           drawerIcon: (config) => (
             <Feather name="shopping-cart" size={20} color="#268039"></Feather>
@@ -80,7 +79,7 @@ const AuthDrawerNavigation = () => {
       />
       <Drawer.Screen
         name="As minhas avaliações"
-        component={ProductDetailsScreen}
+        component={RatingsPage}
         options={{
           drawerIcon: (config) => (
             <Feather name="star" size={20} color="#268039"></Feather>

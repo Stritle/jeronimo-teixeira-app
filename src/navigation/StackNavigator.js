@@ -15,7 +15,7 @@ const StackNavigator = () => {
       }}
     >
       <Stack.Screen
-        name="Home"
+        name="HomeStack"
         component={Home}
         options={{
           headerShown: false,
