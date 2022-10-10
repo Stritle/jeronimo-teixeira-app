@@ -1,18 +1,14 @@
-import {
-  View,
-  Text,
-  ScrollView,
-  TouchableOpacity,
-  StyleSheet,
-  Image,
-} from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import React from "react";
 import oleo from "../images/oleo.webp";
 
-const Products = ({ data, navigation }) => {
+const Products = ({ navigation, data }) => {
   return (
     <View style={styles.content}>
-      <TouchableOpacity style={styles.actionButton}>
+      <TouchableOpacity
+        style={styles.actionButton}
+        onPress={() => navigation.navigate("Detalhes do Produto")}
+      >
         <View>
           <Image source={oleo} style={styles.image}></Image>
           <Text style={styles.name}>{data.name}</Text>
@@ -26,9 +22,7 @@ const Products = ({ data, navigation }) => {
               borderBottomRightRadius: 11,
             }}
           >
-            <TouchableOpacity
-              onPress={() => navigation.navigate("ProductDetailsScreen")}
-            >
+            <TouchableOpacity>
               <Text style={styles.buyButton}>COMPRAR</Text>
             </TouchableOpacity>
           </View>

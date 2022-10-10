@@ -1,27 +1,27 @@
 import React from "react";
-import Encomendas from "../pages/Encomendas";
 import Home from "../pages/Home";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import ProdutosScreen from "../pages/ProdutosScreen";
 import Mensagens from "../pages/Mensagens";
 import ProductDetailsScreen from "../pages/ProductDetailsScreen";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Products from "../components/Products";
 
-const AppStack = () => {
+const StackNavigator = () => {
   const Stack = createNativeStackNavigator();
 
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: false,
+        headerShown: true,
       }}
     >
       <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Encomendas" component={Encomendas} />
-      <Stack.Screen name="Produtos" component={ProdutosScreen} />
       <Stack.Screen name="Mensagens" component={Mensagens} />
-      <Stack.Screen name="Detalhes Produto" component={ProductDetailsScreen} />
+      <Stack.Screen
+        name="Detalhes do Produto"
+        component={ProductDetailsScreen}
+      />
     </Stack.Navigator>
   );
 };
 
-export default AppStack;
+export default StackNavigator;

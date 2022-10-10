@@ -8,6 +8,7 @@ import Home from "../pages/Home";
 import ProdutosScreen from "../pages/ProdutosScreen";
 import Encomendas from "../pages/Encomendas";
 import ProductDetailsScreen from "../pages/ProductDetailsScreen";
+import StackNavigator from "./StackNavigator";
 
 const AuthDrawerNavigation = () => {
   const Drawer = createDrawerNavigator();
@@ -22,7 +23,7 @@ const AuthDrawerNavigation = () => {
     >
       <Drawer.Screen
         name="Home"
-        component={Home}
+        component={StackNavigator}
         options={{
           drawerIcon: (config) => (
             <Ionicons
