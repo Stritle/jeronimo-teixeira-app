@@ -1,14 +1,16 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import React from "react";
+import { Linking } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
-import ProdutosScreen from "../pages/ProdutosScreen";
+import ProdutosPage from "../pages/ProdutosPage";
 import EncomendasPage from "../pages/EncomendasPage";
-import ProductDetailsScreen from "../pages/ProductDetailsScreen";
+import ProductDetailsPage from "../pages/ProductDetailsPage";
 import StackNavigator from "./StackNavigator";
-import RatingsPage from "../pages/RatingsPages";
+import RatingsPage from "../pages/RatingsPage";
+import CondiçoesPage from "../pages/CondiçoesPage";
 
 const AuthDrawerNavigation = () => {
   const Drawer = createDrawerNavigator();
@@ -16,7 +18,6 @@ const AuthDrawerNavigation = () => {
     <Drawer.Navigator
       screenOptions={{
         headerShown: false,
-        drawerStyle: {},
         drawerActiveTintColor: "#268039",
       }}
     >
@@ -44,7 +45,7 @@ const AuthDrawerNavigation = () => {
       />
       <Drawer.Screen
         name="Produtos"
-        component={ProdutosScreen}
+        component={ProdutosPage}
         options={{
           drawerIcon: (config) => (
             <Ionicons
@@ -57,7 +58,7 @@ const AuthDrawerNavigation = () => {
       />
       <Drawer.Screen
         name="Dados pessoais"
-        component={ProductDetailsScreen}
+        component={ProductDetailsPage}
         options={{
           drawerIcon: (config) => (
             <Ionicons
@@ -86,22 +87,10 @@ const AuthDrawerNavigation = () => {
           ),
         }}
       />
-      <Drawer.Screen
-        name="Parcerias e descontos"
-        component={ProductDetailsScreen}
-        options={{
-          drawerIcon: (config) => (
-            <FontAwesome
-              name="handshake-o"
-              size={18}
-              color="#268039"
-            ></FontAwesome>
-          ),
-        }}
-      />
+
       <Drawer.Screen
         name="Sobre a Jerónimo e Teixeira"
-        component={ProductDetailsScreen}
+        component={ProductDetailsPage}
         options={{
           drawerIcon: (config) => (
             <Entypo name="info" size={18} color="#268039"></Entypo>
@@ -110,7 +99,7 @@ const AuthDrawerNavigation = () => {
       />
       <Drawer.Screen
         name="Condiçoes de utilização"
-        component={ProductDetailsScreen}
+        component={CondiçoesPage}
         options={{
           drawerIcon: (config) => (
             <Feather name="check-square" size={20} color="#268039"></Feather>

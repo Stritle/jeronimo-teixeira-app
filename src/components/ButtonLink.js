@@ -1,12 +1,12 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-const ProdutosScreen = () => {
+const ButtonLink = () => {
   return (
     <View>
-      <Text>ProdutosScreen</Text>
+      <Text>ButtonLink</Text>
     </View>
   );
 };
 
-export default ProdutosScreen;
+export default ButtonLink;

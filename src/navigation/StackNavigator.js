@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "../pages/Home";
-import Mensagens from "../pages/Mensagens";
-import ProductDetailsScreen from "../pages/ProductDetailsScreen";
+import MensagensPage from "../pages/MensagensPage";
+import ProductDetailsPage from "../pages/ProductDetailsPage";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { StyleSheet } from "react-native";
 
@@ -23,7 +23,7 @@ const StackNavigator = () => {
       />
       <Stack.Screen
         name="Mensagens"
-        component={Mensagens}
+        component={MensagensPage}
         options={{
           headerStyle: styles.stackNavigator,
           headerTintColor: "#fff",
@@ -31,7 +31,7 @@ const StackNavigator = () => {
       />
       <Stack.Screen
         name="Detalhes do Produto"
-        component={ProductDetailsScreen}
+        component={ProductDetailsPage}
         options={{
           headerStyle: styles.stackNavigator,
           headerTintColor: "#fff",
