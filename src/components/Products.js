@@ -34,15 +34,10 @@ const Products = ({ navigation, data }) => {
 
 const styles = StyleSheet.create({
   content: {
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 0,
-    },
-    shadowOpacity: 0.69,
-    shadowRadius: 4.65,
-
-    elevation: 7,
+    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    marginHorizontal: 5,
+    marginTop: 10,
+    borderRadius: 15,
   },
 
   actionButton: {
@@ -68,7 +63,7 @@ const styles = StyleSheet.create({
   price: { fontSize: 13, textAlign: "center", marginBottom: 5, color: "#fff" },
   buyButton: {
     paddingHorizontal: 11,
-    paddingVertical: 5,
+    paddingVertical: 4,
     textAlign: "center",
     fontWeight: "bold",
     color: "#fff",

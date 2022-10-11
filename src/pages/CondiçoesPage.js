@@ -1,7 +1,9 @@
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import Header from "../components/Header";
-import { Octicons } from "@expo/vector-icons";
+import { Feather } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { EvilIcons } from "@expo/vector-icons";
 
 const CondiçoesPage = ({ navigation }) => {
   return (
@@ -10,15 +12,73 @@ const CondiçoesPage = ({ navigation }) => {
       <View style={styles.container}>
         <Text style={styles.title}>condições de utilização</Text>
         <View style={styles.content}>
-          <Octicons name="feed-star" size={150} color="#268039"></Octicons>
+          <TouchableOpacity
+            style={styles.firstButton}
+            onPress={() => navigation.navigate("Produtos")}
+          >
+            <View style={styles.viewButton}>
+              <MaterialCommunityIcons
+                style={styles.iconeButton}
+                name="account-question-outline"
+                size={20}
+                color="#268039"
+              ></MaterialCommunityIcons>
+              <Text style={styles.buttonText}>Perguntas frequentes</Text>
+            </View>
+            <View>
+              <EvilIcons
+                style={styles.iconeAvançar}
+                name="arrow-right"
+                size={40}
+                color="#268039"
+              ></EvilIcons>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.middleButton}
+            onPress={() => navigation.navigate("Produtos")}
+          >
+            <View style={styles.viewButton}>
+              <MaterialCommunityIcons
+                style={styles.iconeButton}
+                name="security"
+                size={20}
+                color="#268039"
+              ></MaterialCommunityIcons>
+              <Text style={styles.buttonText}>Politica de privacidade</Text>
+            </View>
+            <View>
+              <EvilIcons
+                style={styles.iconeAvançar}
+                name="arrow-right"
+                size={40}
+                color="#268039"
+              ></EvilIcons>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.lastButton}
+            onPress={() => navigation.navigate("Produtos")}
+          >
+            <View style={styles.viewButton}>
+              <Feather
+                style={styles.iconeButton}
+                name="check-square"
+                size={20}
+                color="#268039"
+              ></Feather>
+              <Text style={styles.buttonText}>Termos e condições</Text>
+            </View>
+            <View>
+              <EvilIcons
+                style={styles.iconeAvançar}
+                name="arrow-right"
+                size={40}
+                color="#268039"
+              ></EvilIcons>
+            </View>
+          </TouchableOpacity>
         </View>
-        <Text style={styles.text}>Ainda não fez avaliações, comece agora!</Text>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => navigation.navigate("Produtos")}
-        >
-          <Text style={styles.buttonText}>Ver Produtos</Text>
-        </TouchableOpacity>
       </View>
     </View>
   );
@@ -37,29 +97,58 @@ const styles = StyleSheet.create({
     borderBottomColor: "#CFB617",
     fontWeight: "bold",
   },
-  content: { alignItems: "center", marginTop: 50 },
-  text: {
-    color: "#268039",
-    textTransform: "uppercase",
-    textAlign: "center",
-    fontSize: 16,
-    marginStart: 15,
-    marginEnd: 15,
-    marginTop: 30,
+  content: {
+    marginTop: 40,
+    marginStart: 25,
+    marginEnd: 25,
+    borderRadius: 15,
+    backgroundColor: "#fff",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.34,
+    shadowRadius: 6.27,
+    elevation: 10,
   },
-  button: {
-    backgroundColor: "#268039",
-    marginTop: 30,
-    paddingVertical: 10,
-    marginHorizontal: 50,
+  firstButton: {
+    marginTop: 10,
+    paddingVertical: 25,
     borderRadius: 20,
+    borderBottomColor: "#B4B4B0",
+    borderBottomWidth: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  middleButton: {
+    marginBottom: 15,
+    paddingVertical: 20,
+    borderRadius: 20,
+    borderBottomColor: "#B4B4B0",
+    borderBottomWidth: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  lastButton: {
+    marginBottom: 30,
+    paddingVertical: 10,
+    borderRadius: 20,
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
   buttonText: {
-    textAlign: "center",
-    color: "#fff",
-    textTransform: "uppercase",
-    fontSize: 15,
+    color: "#268039",
+    fontSize: 12,
+    fontWeight: "bold",
+    marginLeft: 10,
+    marginTop: 2,
   },
+  viewButton: { flexDirection: "row" },
+  iconeButton: {
+    marginLeft: 15,
+  },
+  iconeAvançar: { marginRight: 25 },
 });
 
 export default CondiçoesPage;

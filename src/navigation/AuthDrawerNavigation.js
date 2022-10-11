@@ -9,6 +9,7 @@ import EncomendasPage from "../pages/EncomendasPage";
 import StackNavigator from "./StackNavigator";
 import RatingsPage from "../pages/RatingsPage";
 import CondiçoesPage from "../pages/CondiçoesPage";
+import AboutUsPage from "../pages/AboutUsPage";
 
 const AuthDrawerNavigation = () => {
   const Drawer = createDrawerNavigator();
@@ -78,8 +79,8 @@ const AuthDrawerNavigation = () => {
       />
 
       <Drawer.Screen
-        name="Sobre a Jerónimo e Teixeira"
-        component={RatingsPage}
+        name="Sobre a Jerónimo & Teixeira"
+        component={AboutUsPage}
         options={{
           drawerIcon: (config) => (
             <Entypo name="info" size={18} color="#268039"></Entypo>
